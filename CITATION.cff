@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: If you use this code, please cite the paper below.
+title: Belief-Aware Guided SAC for Autonomous Driving
+type: software
+authors:
+  - family-names: Haklıdır
+    given-names: Mehmet
+    affiliation: TÜBİTAK BİLGEM
+version: 1.0.0
+date-released: 2026-10-20
+repository-code: https://github.com/haklidir/ba-gsac-driving
+license: MIT
+preferred-citation:
+  type: conference-paper
+  title: "Belief-Aware Guided SAC for Autonomous Driving Under Uncertainty"
+  authors:
+    - family-names: Haklıdır
+      given-names: Mehmet
+    - family-names: Temeltaş
+      given-names: Hakan
+  conference:
+    name: "CVPR 2026 Workshop on Autonomous Driving (WAD)"
+  year: 2026
