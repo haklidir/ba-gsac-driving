@@ -1,8 +1,10 @@
 # Belief-Aware Guided SAC for Autonomous Driving
 
-Code for the paper *Belief-Aware Guided SAC for Autonomous Driving Under Uncertainty* (Mehmet Haklıdır and Hakan Temeltaş), CVPR 2026 Workshop on Autonomous Driving (WAD).
+Code for the paper
 
-BA-GSAC extends Guided Soft Actor-Critic (Haklidir and Temeltas, IEEE Access 2021) with a belief-aware guidance mechanism. An ensemble of forward models estimates epistemic uncertainty from its disagreement, and the distillation coefficient that ties the control actor to the privileged guiding actor is adapted to that uncertainty: more guidance in novel or uncertain situations, less once the agent is confident. The experiments run on Highway-Env under three levels of partial observability (observation noise, vehicle occlusion, delay) and compare BA-GSAC with fixed-guidance GSAC and SAC.
+> Haklidir, M. (2026). When Does Adaptive Guidance Help? Belief-Aware Privileged Distillation for Autonomous Driving Under Partial Observability. arXiv:2605.26155. Accepted at the CVPR 2026 Workshop on Autonomous Driving (WAD). https://doi.org/10.48550/arXiv.2605.26155
+
+Guided Soft Actor-Critic (GSAC) distills a privileged full-state teacher into a partial-observation student with a fixed distillation coefficient λ. Belief-Aware GSAC (BA-GSAC) modulates λ with the disagreement of an ensemble of forward models and serves here as a testbed for one question: when does adaptive guidance actually help? Five strategies (fixed λ = 0.01 and 0.1, adaptive, linear decay, vanilla SAC) are compared across three POMDP difficulty levels on Highway-Env. Under mild and moderate partial observability the adaptive coefficient looks useful in single-seed runs; under severe occlusion (3 seeds for every method) it collapses to λ_min within about 3K steps. The paper traces this to observability blindness: an ensemble that predicts partial observations reaches low disagreement even under heavy occlusion, because it models what is visible and cannot detect what is missing. A simple linear decay schedule gives the best severe-POMDP results, so the scheduling effect rather than the ensemble drives the stability benefit.
 
 ## Contents
 

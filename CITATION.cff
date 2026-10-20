@@ -11,13 +11,13 @@ date-released: 2026-10-20
 repository-code: https://github.com/haklidir/ba-gsac-driving
 license: MIT
 preferred-citation:
-  type: conference-paper
-  title: "Belief-Aware Guided SAC for Autonomous Driving Under Uncertainty"
+  type: article
+  title: "When Does Adaptive Guidance Help? Belief-Aware Privileged Distillation for Autonomous Driving Under Partial Observability"
   authors:
-    - family-names: Haklıdır
+    - family-names: Haklidir
       given-names: Mehmet
-    - family-names: Temeltaş
-      given-names: Hakan
-  conference:
-    name: "CVPR 2026 Workshop on Autonomous Driving (WAD)"
+  journal: arXiv preprint arXiv:2605.26155
   year: 2026
+  doi: 10.48550/arXiv.2605.26155
+  url: https://arxiv.org/abs/2605.26155
+  notes: Accepted at the CVPR 2026 Workshop on Autonomous Driving (WAD).
